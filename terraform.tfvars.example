@@ -1,0 +1,27 @@
+# Copy this file to terraform.tfvars and customize the values
+
+# AWS Configuration
+aws_region = "eu-central-1"
+
+# Project Configuration
+environment  = "dev"
+project_name = "django-app"
+domain_name  = "example.com"
+
+# EC2 Configuration
+key_pair_name    = "my-key-pair"  # Optional: AWS Key Pair name for SSH access
+instance_type    = "t3.micro"
+
+# Auto Scaling Configuration
+min_capacity     = 1
+max_capacity     = 3
+desired_capacity = 2
+
+# Database Configuration
+db_instance_class      = "db.t3.micro"
+db_allocated_storage   = 20
+backup_retention_period = 7
+multi_az              = false  # Set to true for production
+
+# Production Settings
+enable_deletion_protection = false  # Set to true for production
